@@ -1,0 +1,1 @@
+The frontend of the blog app uses React for dynamic content rendering and TailwindCSS for responsive, utility-first styling. It includes components like a blog list to display posts and a form for creating new ones. Axios is used to communicate with the backend, enabling users to view and submit blog posts seamlessly.
