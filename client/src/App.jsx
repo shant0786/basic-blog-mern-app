@@ -1,47 +1,22 @@
-import './App.css'
+import {BrowserRouter, Route, Routes} from "react-router-dom"
+import HomePage from "./Pages/HomePage.jsx";
+import InvalidPage from "./Pages/InvalidPage.jsx";
+import ByCategoryPage from "./Pages/ByCategoryPage.jsx";
+import DetailsPage from "./Pages/DetailsPage.jsx";
 
-function App() {
 
+const App = () => {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/byCategory/:categoryID" element={<ByCategoryPage/>}/>
+                <Route path="/details/:postID" element={<DetailsPage/>}/>
+                <Route path="*" element={<InvalidPage/>}/>
+            </Routes>
+        </BrowserRouter>
 
-  return (
-      <div className="carousel rounded-box">
-          <div className="carousel-item">
-              <img
-                  src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
-                  alt="Burger"/>
-          </div>
-          <div className="carousel-item">
-              <img
-                  src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
-                  alt="Burger"/>
-          </div>
-          <div className="carousel-item">
-              <img
-                  src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
-                  alt="Burger"/>
-          </div>
-          <div className="carousel-item">
-              <img
-                  src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
-                  alt="Burger"/>
-          </div>
-          <div className="carousel-item">
-              <img
-                  src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
-                  alt="Burger"/>
-          </div>
-          <div className="carousel-item">
-              <img
-                  src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
-                  alt="Burger"/>
-          </div>
-          <div className="carousel-item">
-              <img
-                  src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
-                  alt="Burger"/>
-          </div>
-      </div>
-  )
-}
+    );
+};
 
-export default App
+export default App;
